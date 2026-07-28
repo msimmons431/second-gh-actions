@@ -11,6 +11,13 @@ describe('MainContent', () => {
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
+  {/* This next IT section is the fail */}
+  it('should render a page', () => {
+    render(<MainContent />);
+
+    expect(screen.getByRole('fullpage')).toBeInTheDocument();
+  });
+
   it('should show the help area after clicking the button', async () => {
     render(<MainContent />);
 
