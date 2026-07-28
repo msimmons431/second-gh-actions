@@ -11,6 +11,12 @@ describe('MainContent', () => {
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
+  it('should render a mutton', () => {
+    render(<MainContent />);
+
+    expect(screen.getByRole('mutton')).toBeInTheDocument();
+  });
+
   it('should show the help area after clicking the button', async () => {
     render(<MainContent />);
 
